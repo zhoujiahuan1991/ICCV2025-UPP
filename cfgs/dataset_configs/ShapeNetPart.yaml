@@ -1,0 +1,4 @@
+NAME: PartNormalDataset
+N_POINTS: 2048
+DATA_PATH: data/shapenetcore_partanno_segmentation_benchmark_v0_normal
+TASK: segmentation

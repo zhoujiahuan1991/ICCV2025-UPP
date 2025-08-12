@@ -1,0 +1,62 @@
+optimizer : {
+  type: AdamW,
+  kwargs: {
+  lr : 0.0010, #0.0005
+  weight_decay : 0.05
+}}
+
+scheduler: {
+  type: CosLR,
+  kwargs: {
+    epochs: 50,
+    initial_epochs : 0 #10
+}}
+
+dataset : {
+  train : { _base_: cfgs/dataset_configs/ModelNet40.yaml,
+            others: {subset: 'train'}},
+  val : { _base_: cfgs/dataset_configs/ModelNet40.yaml,
+            others: {subset: 'test'}},
+  test : { _base_: cfgs/dataset_configs/ModelNet40.yaml,
+            others: {subset: 'test'}}}
+
+model : {
+  NAME: Point_MAE_pretask_dev,
+  group_size: 32,
+  num_group: 64,
+  loss: cdl2,
+  transformer_config: {
+    mask_ratio: 0.5,
+    mask_type: 'rand',
+    trans_dim: 384,
+    encoder_dims: 384,
+    depth: 12,
+    drop_path_rate: 0.1,
+    num_heads: 6,
+    decoder_depth: 4,
+    decoder_num_heads: 6,
+  },
+  prompter_config: {
+    rectify_adapter: True,
+    rectify_prompts: True, 
+    rectify_prompts_num: 3, 
+    rectify_prompts_depth: 3,
+    rectify_depth: 3,
+    pretask_adapter: True,
+    pretask_prompts: True, 
+    pretask_prompts_num: 3, 
+    pretask_prompts_depth: 6,
+    pretask_depth: 6,
+  },
+  # downstream_adapter: True,
+  # downstream_prompts: True,
+  gather_idx: True,
+  prompt_propagation_after: True
+  }
+
+npoints: 1024
+total_bs : 64
+step_per_update : 1
+max_epoch : 50
+task: 'pretask'
+data_augmentation: 'scale-translate' #'scale-translate' # 'rotate'

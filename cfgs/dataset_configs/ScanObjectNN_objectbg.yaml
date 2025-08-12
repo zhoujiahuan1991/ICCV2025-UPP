@@ -1,0 +1,3 @@
+NAME: ScanObjectNN
+ROOT: data/ScanObjectNN/main_split
+N_POINTS: 2048
