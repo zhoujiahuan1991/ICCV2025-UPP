@@ -29,7 +29,7 @@ Pre-trained point cloud analysis models have shown promising advancements in var
 To tackle the above challenges, we propose a unified point-level prompting method that reformulates point cloud denoising and completion as a prompting mechanism, enabling robust analysis in a parameterefficient manner. We start by introducing a Rectification Prompter to adapt to noisy points through the predicted rectification vector prompts, effectively filtering noise while preserving intricate geometric features essential for accurate analysis. Sequentially, we further incorporate a Completion Prompter to generate auxiliary point prompts based on the rectified point clouds, facilitating their robustness and adaptability. Finally, a Shape-Aware Unit module is exploited to efficiently unify and capture the filtered geometric features for the downstream point cloud analysis. Extensive experiments on four datasets demonstrate the superiority and robustness of our method when handling noisy and incomplete point cloud data against existing state-of-the-art methods.
 
 ## Main Results
-Classification on Noisy ModelNet40 [34] and Noisy ShapeNet55 [3], including the trainable parameter numbers (Param), computational cost (FLOPs), and overall accuracy. † denotes reproduced results using official code. Point cloud classification accuracy without voting is reported.
+Classification on Noisy ModelNet40 and Noisy ShapeNet55, including the trainable parameter numbers (Param), computational cost (FLOPs), and overall accuracy. † denotes reproduced results using official code. Point cloud classification accuracy without voting is reported.
 
 <p align="center"><img src="files/results.png" width="60%"></p>
 
