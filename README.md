@@ -120,10 +120,10 @@ python main.py  --peft_model  --config  experiments/unify_scan_objonly_cls/femae
 ## Citation
 If you find our paper and code useful in your research, please consider giving a star and citation.
 ```bash
-@article{ai2025upp,
+@inproceedings{ai2025upp,
   title={UPP: Unified Point-Level Prompting for Robust Point Cloud Analysis},
-  author={Ai, Zixiang and Cui, Zhenyu and Peng, Yuxin and Zhou, Jiahuan},
-  journal={arXiv preprint arXiv:2507.18997},
+  author={Zixiang Ai, Zhenyu Cui, Yuxin Peng, Jiahuan Zhou},
+  booktitle={International Conference on Computer Vision (ICCV) },
   year={2025}
 }
 ```
