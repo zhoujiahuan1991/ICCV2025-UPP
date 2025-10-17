@@ -122,8 +122,8 @@ If you find our paper and code useful in your research, please consider giving a
 ```bibtex
 @inproceedings{ai2025upp,
   title={UPP: Unified Point-Level Prompting for Robust Point Cloud Analysis},
-  author={Zixiang Ai, Zhenyu Cui, Yuxin Peng, Jiahuan Zhou},
-  booktitle={International Conference on Computer Vision (ICCV) },
+  author={Ai, Zixiang and Cui, Zhenyu and Peng, Yuxin and Zhou, Jiahuan},
+  booktitle={Proceedings of the IEEE/CVF international conference on computer vision},
   year={2025}
 }
 ```
