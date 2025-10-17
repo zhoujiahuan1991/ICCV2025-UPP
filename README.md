@@ -119,7 +119,7 @@ python main.py  --peft_model  --config  experiments/unify_scan_objonly_cls/femae
 
 ## Citation
 If you find our paper and code useful in your research, please consider giving a star and citation.
-```bash
+```bibtex
 @inproceedings{ai2025upp,
   title={UPP: Unified Point-Level Prompting for Robust Point Cloud Analysis},
   author={Zixiang Ai, Zhenyu Cui, Yuxin Peng, Jiahuan Zhou},
